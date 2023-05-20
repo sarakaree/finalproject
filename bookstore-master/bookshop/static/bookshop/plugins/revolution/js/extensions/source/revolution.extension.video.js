@@ -1,9 +1,4 @@
-/********************************************
- * REVOLUTION 5.4.0 EXTENSION - VIDEO FUNCTIONS
- * @version: 2.0.3 (16.02.2017)
- * @requires jquery.themepunch.revolution.js
- * @author ThemePunch
-*********************************************/
+
 (function($) {
 	"use strict";
 var _R = jQuery.fn.revolution,
@@ -618,11 +613,6 @@ jQuery.extend(true,_R, {
 
 
 
-//////////////////////////////////////////////////////
-// * Revolution Slider - VIDEO / API FUNCTIONS		//
-// * @version: 1.0 (30.10.2014)						//
-// * @author ThemePunch								//
-//////////////////////////////////////////////////////
 
 function getStartSec(st) {						
 	return st == undefined ? -1 :jQuery.isNumeric(st) ? st : st.split(":").length>1 ? parseInt(st.split(":")[0],0)*60 + parseInt(st.split(":")[1],0) : st;

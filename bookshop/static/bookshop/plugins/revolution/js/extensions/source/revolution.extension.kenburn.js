@@ -1,9 +1,5 @@
-/********************************************
- * REVOLUTION 5.0 EXTENSION - KEN BURN
- * @version: 1.3 (15.02.2017)
- * @requires jquery.themepunch.revolution.js
- * @author ThemePunch
-*********************************************/
+
+
 
 (function($) {
 "use strict";
@@ -46,7 +42,8 @@ jQuery.extend(true,_R, {
 		prgs = prgs || 0;
 
 	
-		// NO KEN BURN IMAGE EXIST YET
+		
+		
 		if (l.find('.tp-kbimg').length==0) {
 			l.append('<div class="tp-kbimg-wrap" style="z-index:2;width:100%;height:100%;top:0px;left:0px;position:absolute;"><img class="tp-kbimg" src="'+s+'" style="position:absolute;" width="'+d.owidth+'" height="'+d.oheight+'"></div>');
 			l.data('kenburn',l.find('.tp-kbimg'));

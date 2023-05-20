@@ -54,6 +54,61 @@ def contact_us(request):
     return render(request,'bookshop/contact_us.html')
 
 
+def aboutus(request):
+    return render(request,'bookshop/aboutus.html')
+    debug_message = 'This is the debug message.'
+    context = {'debug_message': debug_message}
+    return render(request, 'aboutus.html', context)
+
+
+
+from django.shortcuts import render, redirect
+from .models import Book
+from .forms import BookForm
+from bookshop.forms import BookForm
+
+def add_book(request):
+    if request.method == 'POST':
+        form = BookForm(request.POST)
+        if form.is_valid():
+            book = form.save(commit=False)
+            book.user = request.user
+            book.save()
+            return redirect('book_list')
+    else:
+        form = BookForm()
+    return render(request, 'bookshop/add_book.html', {'form': form})
+
+
+
+# def add_book(request):
+#     if request.method == 'POST':
+#         # Process the submitted form data and save the book
+#         # Ensure the user is authenticated and their role is either 'Author' or 'Publishing House'
+#         if request.user.role in ['Author', 'Publishing House']:
+#             # Process the form data and save the book
+#             # Code to handle adding a book goes here
+#             return redirect('books_list')  # Redirect to the book list page
+#         else:
+#             return redirect('unauthorized')  # Redirect to unauthorized access page
+
+#     return render(request, 'add_book.html')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def search_Result(request):
     if request.method== 'POST':
         searh_query = request.POST['search']

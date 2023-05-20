@@ -2,7 +2,7 @@
  * REVOLUTION 5.2 EXTENSION - NAVIGATION
  * @version: 1.3.3 (14.02.2017)
  * @requires jquery.themepunch.revolution.js
- * @author ThemePunch
+ * @ ThemePunch
 *********************************************/
 (function($) {
 "use strict";

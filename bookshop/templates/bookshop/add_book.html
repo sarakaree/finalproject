@@ -1,0 +1,81 @@
+{% extends 'bookshop/base.html' %}
+<title>{% block title %} addbook | Bookshop {% endblock %}</title>
+{% block content %}
+
+
+<div class="ps-hero" style="background-color: rgb(187, 130, 187);">
+    <div class="container" >
+        <h3>ADD BOOKS</h3>
+    </div>
+</div>
+
+
+
+<section class="my_account_area pt--80 pb--55 bg--white">
+    <div class="container">
+        <div class="row">
+            <!-- registration form  -->
+            <div class="col-lg-6 col-12">
+
+                <br>
+                <form class="ps-form--contact" action="" method="post">
+                    {% csrf_token %}
+                  
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+   
+                        <input class="form-control"  type="text" name="title" id="title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">category:</label>
+    
+                        <input class="form-control"  type="text" name="category" id="category" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="author">Author name:</label>
+    
+                        <input class="form-control"  type="text" name="author" id="author" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="author_id">Author ID</label>
+                        <input type="text" class="form-control" id="author_id" name="author_id" placeholder="Enter author ID">
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <br>
+    
+                        <textarea class="form-control"  name="description" id="description" rows="4" cols="50"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_image">Image:</label>
+   
+                        <input type="file" name="image" id="id_image">
+
+                    </div>
+
+                  
+
+                    <div class="form-group">
+                        <button class="ps-btn pl-60 pr-60">ADD BOOK</button>
+                    </div>
+                   
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+{% endblock %}
+  

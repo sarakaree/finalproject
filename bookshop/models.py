@@ -1,7 +1,8 @@
 from django.db import models
 from django.utils import timezone
 from django.urls import  reverse
-# Create your models here.
+from django.contrib.auth.models import AbstractUser
+
 class Category(models.Model):
 
     name = models.CharField(max_length=200,db_index=True)
@@ -56,4 +57,25 @@ class Review(models.Model):
         
     def __str__(self):
         return self.product.name
+    
+from django.db import models
+
+class Book(models.Model):
+    title = models.CharField(max_length=100)
+    author = models.CharField(max_length=50)
+    publication_date = models.DateField()
+    genre = models.CharField(max_length=50)
+    publisher = models.CharField(max_length=50)
+    cover_image = models.ImageField(upload_to='book_covers')
+    image = models.ImageField(upload_to='images/')
+    pdf = models.FileField(upload_to='pdfs/')
+    description = models.TextField()
+
+
+class CustomUser(AbstractUser):
+    ROLES = [
+        ('Author', 'Author'),
+        ('Publishing House', 'Publishing House'),
+    ]
+    role = models.CharField(max_length=20, choices=ROLES, null=True, blank=True)
     

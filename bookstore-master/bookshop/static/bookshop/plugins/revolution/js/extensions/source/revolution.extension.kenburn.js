@@ -2,7 +2,7 @@
  * REVOLUTION 5.0 EXTENSION - KEN BURN
  * @version: 1.3 (15.02.2017)
  * @requires jquery.themepunch.revolution.js
- * @author ThemePunch
+ * @ ThemePunch
 *********************************************/
 
 (function($) {

@@ -41,7 +41,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-6 col-md-8 col-sm-6 col-xs-12 ">
-                            <p>baghdad,iraq - Hotline: 0306-2281-637</p>
+                            <p>baghdad,iraq</p>
                         </div>
                         <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
                             <div class="header__actions">
@@ -70,7 +70,7 @@
             <nav class="navigation">
                 <div class="container-fluid">
                     <div class="left">
-                        <div class="header__logo"><a class="ps-logo" href="{% url 'index' %}"><img src="{% static 'bookshop/images/logo.png' %}" alt=""></a></div>
+                        <div class="header__logo"><a class="ps-logo" href="{% url 'index' %}"><p ><h3>RozeLibrary</h3></p></a></div>
                     </div>
                     <div class="center">
                         <ul class="main-menu menu">
@@ -78,6 +78,7 @@
                             <li><a href="{% url 'product_list' %}">CATEGORY</a></li>
                             
                             <li><a href="{% url 'aboutus' %}">About</a></li>
+                            <li><a href="{% url 'add_book' %}">addbook</a></li>
                             
                             <li><a href="{% url 'contact_us' %}">Contact</a></li>
                         </ul>
@@ -85,7 +86,7 @@
                     <div class="right">
                         
                         <div class="menu-toggle"><span></span></div>
-                        <div class="ps-cart"><a class="ps-cart__toggle" href="#"><span><i></i></span><i class="ps-icon-cart"></i></a>
+                        <div class="ps-cart"><a class="ps-cart__toggle" href="#"><span ><i></i></span><i class="ps-icon-cart"></i></a>
                             <div class="ps-cart__listing">
                                 {% for item in cart %}
                                 {% with product=item.product %}
@@ -169,34 +170,23 @@
                 <div class="ps-container">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
-                            <div class="ps-site-info site-info"><a class="ps-logo" href="index.html"><img src="{% static 'bookshop/images/logo.png' %}" alt=""></a>
-                                <p>Xuper is a global fashion destination for 20-somethings. We sell cutting-edge fashion and offer a wide variety of fashion-related content, making Xuper Store the hub of a thriving fashion community.</p>
+                           
+                                
                                 <div class="ps-site-info__contact">
                                     <h4>Contact Info</h4>
-                                    <p>Islamabad, Pakistan</p>
-                                    <p>(+92 ) 3062 281637</p>
+                                    <p>iraq.baghdad</p>
+                                    <p>(+964 ) 123465672</p>
                                 </div>
                                 <ul class="ps-social">
                                     <li><a href="https://www.facebook.com/sk7698277"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="https://www.twitter.com/sk7698277"><i class="fa fa-twitter"></i></a></li>
                                     <li><a href="https://www.instagram.com/sk7698277"><i class="fa fa-instagram"></i></a></li>
                                 </ul>
-                            </div>
+                            
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                             <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
-                                    <div class="ps-widget ps-widget--footer widget widget_footer">
-                                        <h2 class="ps-widget__title">Our Branding</h2>
-                                        <ul class="ps-list--line">
-                                            <li><a class="text-uppercase" href="#">DKNY</a></li>
-                                            <li><a class="text-uppercase" href="#">GUCCI</a></li>
-                                            <li><a class="text-uppercase" href="#">BANANA & DOLCE</a></li>
-                                            <li><a class="text-uppercase" href="#">HERMER</a></li>
-                                            <li><a class="text-uppercase" href="#">CHANEL</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                               
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
                                     <div class="ps-widget ps-widget--footer widget widget_footer">
                                         <h2 class="ps-widget__title">Customer Care</h2>
@@ -204,7 +194,7 @@
                                             <li><a href="#">My Account</a></li>
                                             <li><a href="#">Track your Order</a></li>
                                             <li><a href="#">Customer Service</a></li>
-                                            <li><a href="#">FAQs</a></li>
+                                            
                                             <li><a href="#">Product Support</a></li>
                                         </ul>
                                     </div>
@@ -214,10 +204,10 @@
                                         <h2 class="ps-widget__title">Your Account</h2>
                                         <ul class="ps-list--line">
                                             <li><a href="#">Your account</a></li>
-                                            <li><a href="#">Newsletter</a></li>
-                                            <li><a href="#">Information</a></li>
+                                           
+                                            
                                             <li><a href="#">Payment menthod</a></li>
-                                            <li><a href="#">Your wishlist</a></li>
+                                            
                                         </ul>
                                     </div>
                                 </div>
@@ -230,7 +220,7 @@
                 <div class="ps-container">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                            <p>&copy; Copyright  <span>2020</span>. Design by <a href="https://www.twitter.com/sk7698277">Sajjad Khan</a>.</p>
+                            <p>&copy; Copyright </p>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
                             <div class="ps-footer__payment-methods"><a href="#"><img src="{% static 'bookshop/images/payment-method/paypal.png' %}" alt=""></a><a href="#"><img src="{% static 'bookshop/images/payment-method/visa.png' %}" alt=""></a><a href="#"><img src="{% static 'bookshop/images/payment-method/master-card.png' %}" alt=""></a></div>

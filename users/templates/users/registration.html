@@ -12,6 +12,7 @@
                     <h1 style="margin-top:10%;">Register With Us</h1><br>
                     <form class="ps-form--contact" action="" method="post">
                         {% csrf_token %}
+                        
                         <div class="form-group">
                             <label>Username <sup>*</sup></label>
                             <input class="form-control" type="text" placeholder="Enter Your Username" name="username"
@@ -31,6 +32,17 @@
                             <label>Confirm Password <sup>*</sup></label>
                             <input class="form-control" type="password" placeholder="Confirm Password" name="confirm_password" required>
                         </div>
+
+                        <div class="form-group">
+                            <label for="author_id">Author ID</label>
+                            <input type="text" class="form-control" id="author_id" name="author_id" placeholder="Enter author ID">
+                        </div>
+                        <div class="form-group">
+                            <label for="license">Publishing House License</label>
+                            <input type="text" class="form-control" id="license" name="license" placeholder="Enter publishing house license">
+                        </div>
+
+
                         <div class="form-group">
                             <button class="ps-btn pl-60 pr-60">Register </button>
                         </div>
